@@ -28,14 +28,14 @@
             <div class="categorias">
                 <h4>Categorias</h4>
                 <ul>
-                    <li onclick="exibir_todas()">Todas (12)</li>
-                    <li onclick="exibir_categoria('blusa')">Blusas (6)</li>
-                    <li onclick="exibir_categoria('vestido')">Vestidos (2)</li>
-                    <li onclick="exibir_categoria('short')">Shorts (2)</li>
-                    <li onclick="exibir_categoria('calca')">Calças (2)</li>
+                    <li onclick="exibir_todas()">Todas(12)</li>
+                    <li onclick="exibir_categoria('blusa')">Blusas(6)</li>
+                    <li onclick="exibir_categoria('vestido')">Vestidos(2)</li>
+                    <li onclick="exibir_categoria('short')">Shorts(2)</li>
+                    <li onclick="exibir_categoria('calca')">Calças(2)</li>
                 </ul>
             </div>
-
+            
             <section class="produtos">
                 <div class="box-produtos" id="blusa">
                     <img src="./imagens/blusa1.png" alt="Camiseta florida com amarração" width="180px" height="180px" onclick="destaqueImg(this)">
@@ -49,7 +49,7 @@
                                 <p class="produtos-preco-promocional">R$89,90</p>
                             </li>
                         </ul>
-                        <button class="favoritos" type="button"><img src="imagens/favorite.png"></button>
+                        <button class="favoritos" type="button" onclick="favoritar()" onclick="favoritar()"><img src="imagens/favorite.png"></button>
                     </div>
                     <hr>
                 </div>
@@ -65,7 +65,7 @@
                                 <p class="produtos-preco-promocional">R$69,90</p>
                             </li>
                         </ul>
-                        <button class="favoritos" type="button"><img src="imagens/favorite.png"></button>
+                        <button class="favoritos" type="button" onclick="favoritar()"><img src="imagens/favorite.png"></button>
                     </div>
                     <hr>
                 </div>
@@ -81,73 +81,154 @@
                                 <p class="produtos-preco-promocional">R$99,90</p>
                             </li>
                         </ul>
-                        <button class="favoritos" type="button"><img src="imagens/favorite.png"></button>
+                        <button class="favoritos" type="button" onclick="favoritar()"><img src="imagens/favorite.png"></button>
                     </div>
                     <hr>
                 </div>
                 <div class="box-produtos" id="blusa">
                     <img src="./imagens/blusa4.png" alt="Camiseta bordada amarração" width="180px" height="180px" onclick="destaqueImg(this)">
                     <p class="produtos-descricao">Camiseta bordada amarração</p>
-                    <p class="produtos-preco">R$89,90</p>
-                    <p class="produtos-preco-promocional">R$69,90</p>
+                    <div class="box-preco-fav">
+                        <ul class="inf-preco">
+                            <li>
+                                <p class="produtos-preco">R$89,90</p>
+                            </li>
+                            <li>
+                                <p class="produtos-preco-promocional">R$69,90</p>
+                            </li>
+                        </ul>
+                        <button class="favoritos" type="button" onclick="favoritar()"><img src="imagens/favorite.png"></button>
+                    </div>
                     <hr>
                 </div>
                 <!--Nova linha com produtos-->
                 <div class="box-produtos" id="calca">
                     <img src="./imagens/calca1.jpg" alt="alça Jeans com Rasgos" width="180px" height="180px" onclick="destaqueImg(this)">
                     <p class="produtos-descricao">Calça Jeans com Rasgos</p>
-                    <p class="produtos-preco">R$119,90</p>
-                    <p class="produtos-preco-promocional">R$89,90</p>
+                    <div class="box-preco-fav">
+                        <ul class="inf-preco">
+                            <li>
+                                <p class="produtos-preco">R$119,90</p>
+                            </li>
+                            <li>
+                                <p class="produtos-preco-promocional">R$89,90</p>
+                            </li>
+                        </ul>
+                        <button class="favoritos" type="button" onclick="favoritar()"><img src="imagens/favorite.png"></button>
+                    </div>
                     <hr>
                 </div>
                 <div class="box-produtos" id="blusa">
                     <img src="./imagens/blusa6.png" alt="Camiseta margaridas bordada" width="180px" height="180px" onclick="destaqueImg(this)">
                     <p class="produtos-descricao">Camiseta margaridas bordada</p>
-                    <p class="produtos-preco">R$89,90</p>
-                    <p class="produtos-preco-promocional">R$59,90</p>
+                    <div class="box-preco-fav">
+                        <ul class="inf-preco">
+                            <li>
+                                <p class="produtos-preco">R$89,90</p>
+                            </li>
+                            <li>
+                                <p class="produtos-preco-promocional">R$59,90</p>
+                            </li>
+                        </ul>
+                        <button class="favoritos" type="button" onclick="favoritar()"><img src="imagens/favorite.png"></button>
+                    </div>
                     <hr>
                 </div>
                 <div class="box-produtos" id="vestido">
                     <img src="./imagens/vestido1.jpg" alt="Vestido amarelo floral" width="180px" height="180px" onclick="destaqueImg(this)">
                     <p class="produtos-descricao">Vestido amarelo floral</p>
-                    <p class="produtos-preco">R$69,90</p>
-                    <p class="produtos-preco-promocional">R$39,90</p>
+                    <div class="box-preco-fav">
+                        <ul class="inf-preco">
+                            <li>
+                                <p class="produtos-preco">R$69,90</p>
+                            </li>
+                            <li>
+                                <p class="produtos-preco-promocional">R$39,90</p>
+                            </li>
+                        </ul>
+                        <button class="favoritos" type="button" onclick="favoritar()"><img src="imagens/favorite.png"></button>
+                    </div>
                     <hr>
                 </div>
                 <div class="box-produtos" id="blusa">
                     <img src="./imagens/blusa8.png" alt="Blusa verde amarração" width="180px" height="180px" onclick="destaqueImg(this)">
                     <p class="produtos-descricao">Camiseta verde amarração</p>
-                    <p class="produtos-preco">R$89,90</p>
-                    <p class="produtos-preco-promocional">R$69,90</p>
+                    <div class="box-preco-fav">
+                        <ul class="inf-preco">
+                            <li>
+                                <p class="produtos-preco">R$89,90</p>
+                            </li>
+                            <li>
+                                <p class="produtos-preco-promocional">R$69,90</p>
+                            </li>
+                        </ul>
+                        <button class="favoritos" type="button" onclick="favoritar()"><img src="imagens/favorite.png"></button>
+                    </div>
                     <hr>
                 </div>
                 <!--Nova linha com produtos-->
                 <div class="box-produtos" id="calca">
                     <img src="./imagens/calca2.jpg   " alt="Calça social" width="180px" height="180px" onclick="destaqueImg(this)">
                     <p class="produtos-descricao">Calça social</p>
-                    <p class="produtos-preco">R$149,90</p>
-                    <p class="produtos-preco-promocional">R$119,90</p>
+                    <div class="box-preco-fav">
+                        <ul class="inf-preco">
+                            <li>
+                                <p class="produtos-preco">R$149,90</p>
+                            </li>
+                            <li>
+                                <p class="produtos-preco-promocional">R$119,90</p>
+                            </li>
+                        </ul>
+                        <button class="favoritos" type="button" onclick="favoritar()"><img src="imagens/favorite.png"></button>
+                    </div>
                     <hr>
                 </div>
                 <div class="box-produtos" id="vestido">
                     <img src="./imagens/vestido2.jpg" alt="Vestido rosê" width="180px" height="180px" onclick="destaqueImg(this)">
                     <p class="produtos-descricao">Vestido rosê</p>
-                    <p class="produtos-preco">R$99,90</p>
-                    <p class="produtos-preco-promocional">R$79,90</p>
+                    <div class="box-preco-fav">
+                        <ul class="inf-preco">
+                            <li>
+                                <p class="produtos-preco">R$99,90</p>
+                            </li>
+                            <li>
+                                <p class="produtos-preco-promocional">R$79,90</p>
+                            </li>
+                        </ul>
+                        <button class="favoritos" type="button" onclick="favoritar()"><img src="imagens/favorite.png"></button>
+                    </div>
                     <hr>
                 </div>
                 <div class="box-produtos" id="short">
                     <img src="./imagens/short2.jpg" alt="Short Rasgado" width="180px" height="180px" onclick="destaqueImg(this)">
                     <p class="produtos-descricao">Short Rasgado</p>
-                    <p class="produtos-preco">R$69,90</p>
-                    <p class="produtos-preco-promocional">R$49,90</p>
+                    <div class="box-preco-fav">
+                        <ul class="inf-preco">
+                            <li>
+                                <p class="produtos-preco">R$69,90</p>
+                            </li>
+                            <li>
+                                <p class="produtos-preco-promocional">R$49,90</p>
+                            </li>
+                        </ul>
+                        <button class="favoritos" type="button" onclick="favoritar()"><img src="imagens/favorite.png"></button>
+                    </div>
                     <hr>
                 </div>
                 <div class="box-produtos" id="blusa">
                     <img src="./imagens/blusa12.png" alt="Camiseta babado" width="180px" height="180px" onclick="destaqueImg(this)">
                     <p class="produtos-descricao">Camiseta babado</p>
-                    <p class="produtos-preco">R$89,90</p>
-                    <p class="produtos-preco-promocional">R$69,90</p>
+                    <div class="box-preco-fav">
+                        <ul class="inf-preco">
+                            <li>
+                                <p class="produtos-preco">R$89,90</p>
+                            </li>
+                            <li>
+                                <p class="produtos-preco-promocional">R$69,90</p>
+                            </li>
+                        </ul>
+                        <button class="favoritos" type="button" onclick="favoritar()"><img src="imagens/favorite.png"></button>
+                    </div>
                     <hr>
                 </div>
             </section>

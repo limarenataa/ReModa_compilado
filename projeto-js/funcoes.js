@@ -37,6 +37,11 @@ let destaqueImg = (imagem) => {
     }
 }
 
+//Favoritar um produto
+
+let favoritar = () => {
+    alert("Produto adicionado aos favoritos!")
+}
 
 
     
