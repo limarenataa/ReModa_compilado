@@ -24,17 +24,30 @@ let exibir_todas = () => {
     }
 };
 
-//Expandir o tamanho da imagem 
-let destaqueImg = (imagem) => {
-    console.log(imagem);
-    if (imagem.width == 180 && imagem.height == 180) {
-        imagem.width = 280
-        imagem.height = 280
+//Expandir o tamanho da imagem onclick; 
+// let destaqueImg = (imagem) => {
+//     console.log(imagem);
+//     if (imagem.width == 180 && imagem.height == 180) {
+//         imagem.width = 280
+//         imagem.height = 280
         
-    }else {
-        imagem.width = 180
-        imagem.height = 180
-    }
+        
+//     }else {
+//         imagem.width = 180
+//         imagem.height = 180
+        
+//     }
+//
+
+//Expandir o tamanho da imagem onmousemove e onmouseout:
+
+
+function imgNormal (imagem) {
+    imagem.style.width = "180px";
+}
+
+function destaqueImg(imagem) {
+    imagem.style.width = "280px";
 }
 
 //Favoritar um produto
