@@ -12,11 +12,11 @@ Para instalar execute o comando abaixo na pasta 'www' do WAMP server.
 obs: Não testado no XAMP.
 
 ```
-git clone https://github.com/limarenataa/projetos-recode.git
+git clone https://github.com/limarenataa/ReModa.git
 
 ```
 
-Criar banco de dados MySQL na porta 3006 com o nome projetos-recode. Executar comando SQL dentro da pasta SQL.
+Criar banco de dados MySQL na porta 3006 com o nome ReModa. Executar comando SQL dentro da pasta SQL.
 
 ### A fazer
 
