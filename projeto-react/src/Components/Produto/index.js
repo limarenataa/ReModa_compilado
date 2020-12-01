@@ -19,10 +19,10 @@ function Produto(props) {
             <img  className="produto-imagem" src={require(`./img/${props.imagem}`).default} alt="Imagem de Produtos" />
             <figcaption className="produtos-descricao">
                 <p className="produtos-nome">
-                    {props.nome}
+                    {props.descricao}
                 </p>
                 <p className="produtos-preco-promocional">
-                    R$ {props.precoPromocional}
+                    R$ {props.preco_final}
                 </p>
             </figcaption>
         </figure>

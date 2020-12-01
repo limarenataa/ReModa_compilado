@@ -7,19 +7,16 @@ function Produtos() {
 
     const [produtos, setProdutos] = useState([]);
 
-    useEffect(() => {
-        async function fetchData() {
+    useEffect(async () => {
             const answer  = await fetch("http://localhost/remoda/ReModa/projeto-react/src/php/api/produtos.php")
             const data = await answer.json()
             setProdutos(data);
-        }
-        fetchData();
     }, []);
 
     return (
         <Container>
             <Row>
-               {produtos && produtos.map(item => <Produto key={item.id} imagem={item.imagem} nome={item.nome}  precoPromocional={item.precoPromocional}  categoria={item.categoria} />)}
+                { produtos && produtos.map(item => <Produto imagem={item.imagem} descricao={item.descricao} preco_final={item.preco_final} categoria={item.categoria} /> )}
             </Row>
         </Container>
     );
