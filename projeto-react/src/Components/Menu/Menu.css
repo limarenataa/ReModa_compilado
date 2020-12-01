@@ -1,0 +1,8 @@
+.Nav.Link {
+    display: flex;
+    justify-content: center;
+}
+
+.active {
+    border-bottom: 2px solid rgb(180, 162, 3);
+}

@@ -1,0 +1,32 @@
+
+.produto-imagem {
+    margin-top: 20px;
+    width: 180px;
+
+}
+
+.produtos-descricao {
+    padding: 10px;
+    width: 180px;
+    position: relative;
+    background-color: rgba(34, 33, 33, 0.8);
+    top: -60px;
+}
+
+.produtos-descricao p {
+  margin: 0px;
+}
+
+.produtos-nome{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 10pt;
+    color: rgba(255, 255, 245, .9);
+}
+
+
+.produtos-preco-promocional {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 14px;
+    color: rgb(180, 162, 3);
+    margin: 0px;
+}
