@@ -3,7 +3,6 @@ import Rotas from './rotas';
 
 import { BrowserRouter } from 'react-router-dom';
 
-import { Container } from 'react-bootstrap';
 
 
 function App() {
@@ -14,9 +13,9 @@ function App() {
           <Menu />
         </header>
         <main>
-          <Container fluid>
+          
             <Rotas />
-          </Container> 
+          
         </main>
       </div>
     </BrowserRouter>

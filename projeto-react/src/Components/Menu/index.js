@@ -22,7 +22,7 @@ function BaseMenu(props) {
                         <NavDropdown.Item href="#action/3.2">São Paulo</NavDropdown.Item>
                         <NavDropdown.Item href="#action/3.3">Salvador</NavDropdown.Item>
                         <NavDropdown.Divider />
-                        <NavDropdown.Item as={Link} to="/Lojas" href="Lojas">Todas</NavDropdown.Item>
+                        <NavDropdown.Item as={Link} to="/TodasLojas" href="/TodasLojas">Todas</NavDropdown.Item>
                     </NavDropdown> 
                     <Nav.Link  as={Link} to="/Entrar" href="/Entrar">Entrar</Nav.Link>
                     <Nav.Link  as={Link} to="/Cadastro" href="/Cadastro">Cadastre-se</Nav.Link>
