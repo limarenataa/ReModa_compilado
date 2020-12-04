@@ -1,14 +1,20 @@
-import { useEffect, useState } from 'react';
-
+import { useEffect, useState } from 'react'; 
 import { Form, Button, Col, Container } from 'react-bootstrap';
 import Pedidos from './Pedidos';
 
+
+
 export default function Formulario(props) {
+
+    const [ pedidos, setPedidos ] = useState([]) // useState é uma função que retorna 2 valores. Então ele retorna o estado (pedidos) e a função para poder modificar o estado (setPedidos)
+
+
+
 
     const controleEnvio = async (evento) => {
         evento.preventDefault();
 
-    var formData = new FormData(evento.target);
+    // var formData = new FormData(evento.target);
 
     
         const url = "http://localhost/remoda/ReModa/projeto-react/src/php/api/pedidos.php";
@@ -20,10 +26,23 @@ export default function Formulario(props) {
         
         const resposta = await fetch(url, cabecalho);
         const resultado = await resposta.json()
-
         console.log(resultado);
+
     
     }
+
+    //Exibição da lista do BD 
+    useEffect(() => {
+        async function pedidosClientes(){
+            const url = "http://localhost/remoda/ReModa/projeto-react/src/php/api/joinPedidosClientes.php"
+            const resposta = await fetch(url);
+            const resultado = await resposta.json();
+         
+            setPedidos(resultado);
+        }
+
+        pedidosClientes();
+    })
 
     return (
         <Container>
@@ -93,7 +112,10 @@ export default function Formulario(props) {
                     <div className="tabela-limitada">
                         <table className="table table-stripe">
                             <tbody>
-                                {/* {pedidos && pedidos.map( pedido => <Pedidos key={pedido.idpedidos} nome_cliente={pedido.nome_cliente} email={pedido.email} telefone={pedido.telefone} endereco={pedido.endereco} complemento={pedido.complemento} descricao_produto={pedido.descricao_produto} preco={pedido.preco} preco={pedido.quantidade} preco_final={pedido.preco_final} />)} */}
+                                    {pedidos && pedidos.map(pedido => <Pedidos key={pedido.idpedidos} idpedidos={pedido.idpedidos} descricao_produto={pedido.descricao_produto}
+                                     preco={pedido.preco} quantidade={pedido.quantidade} preco_final={pedido.preco_final} fk_idcliente={pedido.fk_idcliente} 
+                                     idcliente={pedido.idcliente} nome_cliente={pedido.nome_cliente} email={pedido.email} 
+                                     telefone={pedido.telefone} endereco={pedido.endereco} complemento={pedido.complemento}/> )}
                             </tbody>
                         </table>
                     </div>
