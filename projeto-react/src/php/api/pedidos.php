@@ -32,7 +32,8 @@
             '$descricao_produto',
             '$preco',
             '$quantidade',
-            '$preco_final'
+            '$preco_final',
+            null
             );";
 
         nonquery($sql);
@@ -40,3 +41,4 @@
         echo json_encode($_POST);
 
     };
+

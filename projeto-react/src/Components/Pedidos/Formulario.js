@@ -19,7 +19,7 @@ export default function Formulario(props) {
             };
         
         const resposta = await fetch(url, cabecalho);
-        const resultado = await resposta.text()
+        const resultado = await resposta.json()
 
         console.log(resultado);
     
