@@ -1,7 +1,10 @@
-
+.produto {
+    margin-right: 15px;
+}
 .produto-imagem {
     margin-top: 5px;
     width: 270px;
+    cursor: pointer;
 
 }
 
