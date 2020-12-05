@@ -42,7 +42,7 @@ export default function Formulario(props) {
         }
 
         pedidosClientes();
-    })
+    }, [pedidos]) // o estado de pedidos vai atualizar na lista toda vez que foi modificado.
 
     return (
         <Container>
