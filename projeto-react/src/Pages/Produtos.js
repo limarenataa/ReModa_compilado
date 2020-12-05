@@ -2,6 +2,8 @@ import { useState, useEffect } from 'react';
 
 import { Container, Row } from 'react-bootstrap';
 import Produto from '../Components/Produto';
+import Categorias from '../Components/Categorias/Categorias';
+import './produtos.css'; 
 
 function Produtos() {
 
@@ -24,9 +26,9 @@ function Produtos() {
     }, []);
 
     return (
-        <Container>
-            {/* <Categorias /> */}
-            <Row>
+        <Container className="pgProdutos">
+            <Categorias />
+            <Row className="produtos">
                 { produtos && produtos.map(item => <Produto key={item.idproduto} imagem={item.imagem} 
                 descricao_produto={ item.descricao_produto  } preco_final={item.preco_final} categoria={item.categoria} /> )}
             </Row>

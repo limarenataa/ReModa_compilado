@@ -1,5 +1,6 @@
 import './produto.css';
 
+
 function Produto(props) {
 
     function show_info(event) {
@@ -15,17 +16,19 @@ function Produto(props) {
     }
 
     return(
-        <figure className={props.categoria + " produto col-lg-3 col-md-4 col-sm-6 col-xs-12 mr-auto"} onMouseOver={show_info} onMouseOut={hide_info}>
-            <img  className="produto-imagem" src={require(`./img/${props.imagem}`).default} alt="Imagem de Produtos" />
-            <figcaption className="produtos-descricao">
-                <p className="produtos-nome">
-                    {props.descricao_produto}
-                </p>
-                <p className="produtos-preco-promocional">
-                    R$ {props.preco_final}
-                </p>
-            </figcaption>
-        </figure>
+    
+            <figure className={props.categoria + " produto col-lg-3 col-md-4 col-sm-6 col-xs-12 mr-auto"} onMouseOver={show_info} onMouseOut={hide_info}>
+                <img  className="produto-imagem" src={require(`./img/${props.imagem}`).default} alt="Imagem de Produtos" />
+                <figcaption className="produtos-descricao">
+                    <p className="produtos-nome">
+                        {props.descricao_produto}
+                    </p>
+                    <p className="produtos-preco-promocional">
+                        R$ {props.preco_final}
+                    </p>
+                </figcaption>
+            </figure>
+        
     );
 };
 
