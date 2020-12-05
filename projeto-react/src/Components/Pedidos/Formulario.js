@@ -1,6 +1,7 @@
 import { useEffect, useState } from 'react'; 
 import { Form, Button, Col, Container } from 'react-bootstrap';
 import Pedidos from './Pedidos';
+import './formulario.css';
 
 
 
@@ -8,14 +9,8 @@ export default function Formulario(props) {
 
     const [ pedidos, setPedidos ] = useState([]) // useState é uma função que retorna 2 valores. Então ele retorna o estado (pedidos) e a função para poder modificar o estado (setPedidos)
 
-
-
-
     const controleEnvio = async (evento) => {
         evento.preventDefault();
-
-    // var formData = new FormData(evento.target);
-
     
         const url = "http://localhost/remoda/ReModa/projeto-react/src/php/api/pedidos.php";
         const dados = new FormData(evento.target);
@@ -42,13 +37,13 @@ export default function Formulario(props) {
         }
 
         pedidosClientes();
-    }, [pedidos]) // o estado de pedidos vai atualizar na lista toda vez que foi modificado.
+    }, [pedidos], [])  // o estado de pedidos vai atualizar na lista toda vez que foi modificado.
 
     return (
-        <Container>
+        <Container className="formulario">
             <Form  onSubmit={controleEnvio}>
                 
-                <h4>Faça seu pedido</h4>
+                <h3>Faça seu pedido</h3>
 
                     <Form.Row>
                         <Form.Group as={Col} controlId="nome_cliente">
