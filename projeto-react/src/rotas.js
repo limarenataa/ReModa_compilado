@@ -8,7 +8,7 @@ import  TodasLojas from './Pages/TodasLojas';
 function Rotas() {
     return (
         <Switch>
-            <Route exact path="/" component={Home} />
+            <Route exact path="/Home" component={Home} />
             <Route exact path="/Produtos" component={Produtos} />
             <Route exact path="/Pedidos" component={Pedidos} />
             <Route exact path="/TodasLojas" component={TodasLojas} />
