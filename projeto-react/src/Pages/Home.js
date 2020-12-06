@@ -1,13 +1,19 @@
-
-import { render } from '@testing-library/react';
+import React from 'react';
+import { Container } from 'react-bootstrap';
 import BannerPrincipal from '../Components/BannerPrincipal';
 
 
-function Home() {
+function Banner() {
     return (
-        <BannerPrincipal />  
+        <React.StrictMode>
+            <BannerPrincipal />  
+            <Container>
+                <br/>
+                <p className="lead display-4">Seja bem vindo(a)!</p>
+                <h2>Reinvente seu estilo!</h2>
+            </Container>
+        </React.StrictMode>
         );
- 
 };
 
-export default Home;
+export default Banner;
