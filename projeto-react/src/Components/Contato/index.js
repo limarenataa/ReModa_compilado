@@ -1,12 +1,14 @@
 
 import { Container, Form , Col, Button } from 'react-bootstrap';
+import './contato.css';
 
 
 export default function Contato (){
 
     return(
         <Container>
-            <Form>
+            <Form>  
+                <h3 className="titulo-contato">Contato</h3>
                 <Form.Row>
                     <Form.Group as={Col} controlId="nome_cliente">
                         <Form.Label>Nome: </Form.Label>

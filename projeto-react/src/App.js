@@ -1,9 +1,8 @@
 import Menu from './Components/Menu';
+import Footer from './Components/Footer';
 import Rotas from './rotas';
 
 import { BrowserRouter } from 'react-router-dom';
-
-
 
 function App() {
   return (
@@ -13,10 +12,11 @@ function App() {
           <Menu />
         </header>
         <main>
-          
-            <Rotas />
-          
+          <Rotas />
         </main>
+        <footer>
+          <Footer />
+        </footer>
       </div>
     </BrowserRouter>
   );

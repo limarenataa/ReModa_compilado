@@ -43,7 +43,7 @@ export default function Formulario(props) {
         <Container className="formulario">
             <Form  onSubmit={controleEnvio}>
                 
-                <h3>Faça seu pedido</h3>
+                <h3 className="titulo-form">Faça seu pedido</h3>
 
                     <Form.Row>
                         <Form.Group as={Col} controlId="nome_cliente">
@@ -100,7 +100,7 @@ export default function Formulario(props) {
                         <Form.Check type="checkbox" label="Embalar para presente" />
                     </Form.Group>
 
-                    <Button variant="dark" type="submit">Concluir</Button>
+                    <Button className="btn-form" variant="dark" type="submit">Concluir</Button>
             </Form>
             <div className="row">
                 <div className="col-lg-12 col-md-12 mx-auto">

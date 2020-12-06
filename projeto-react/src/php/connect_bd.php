@@ -19,17 +19,17 @@ function query ($parametroSql) {
 
     function nonquery($parametroSql) {
         
-        $servername = "localhost";
-        $username = "root";
-        $password = "";
-        $database = "remoda";
+    $servername = "localhost";
+    $username = "root";
+    $password = "";
+    $database = "remoda";
 
-        $conn = mysqli_connect($servername, $username, $password, $database);
-        $conn->set_charset("utf8");
-        $resultado = mysqli_query($conn, $parametroSql);
-        mysqli_close($conn);
+    $conn = mysqli_connect($servername, $username, $password, $database);
+    $conn->set_charset("utf8");
+    $resultado = mysqli_query($conn, $parametroSql);
+    mysqli_close($conn);
 
-        }
+    }
 
    
 
