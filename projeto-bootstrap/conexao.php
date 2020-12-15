@@ -2,7 +2,7 @@
         $servername = "localhost";
         $username = "root";
         $password = "";
-        $database = "remoda";
+        $database = "remodaphp";
 
 
         $conn = mysqli_connect($servername, $username, $password, $database);
