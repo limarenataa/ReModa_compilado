@@ -49,7 +49,7 @@
             <!--Inserindo dados da tabela produtos via PHP-->
             <?php 
             
-                $sql = "select * from produtos";
+                $sql = "select * from todosprodutos";
                 $result = $conn->query($sql);
             
                 if($result->num_rows > 0){
