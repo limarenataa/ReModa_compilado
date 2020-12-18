@@ -6,7 +6,7 @@ include("conexao.php");
 //Confere se esses campos de fato existem com conteúdo dentro:
 if(isset($_POST['nome']) && isset($_POST['mensagem'])){
 
-    echo "Dados recebidos!";
+    // echo "Dados recebidos!";
 
     $nome = $_POST['nome'];
     $mensagem = $_POST['mensagem'];
@@ -16,11 +16,11 @@ if(isset($_POST['nome']) && isset($_POST['mensagem'])){
 
     $result = $conn->query($sql);
 
-    if ($result){
-        echo "Dados Inseridos com sucesso!";
-    } else {
-        echo "Dados não inseridos";
-    }
+    // if ($result){
+    //     echo "Dados Inseridos com sucesso!";
+    // } else {
+    //     echo "Dados não inseridos";
+    // }
 }
 ?>
 
