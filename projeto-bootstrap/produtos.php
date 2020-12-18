@@ -41,7 +41,7 @@
                     <li onclick="exibir_categoria('box_vestidos')">Vestidos(2)</li>
                     <li onclick="exibir_categoria('box_shorts')">Shorts(2)</li>
                     <li onclick="exibir_categoria('box_calcas')">Calças(2)</li>
-                </ul>
+                </ul>   
             </div>
             
             <div class="container">
