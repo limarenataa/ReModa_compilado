@@ -11,5 +11,7 @@
 
         if(!$conn){
             die("A conexão falhou".mysqli_connect_error());
+        } else {
+            echo "Conexão estabelecida";
         }
 ?>
