@@ -1,0 +1,29 @@
+.rodape {
+
+    margin-top: 200px;
+    display: flex;
+    height: 160px;
+    text-align: center;
+   
+}
+
+.imagem-footer {
+    width: 20%;
+}
+
+.info-footer {
+   align-self: center;
+}
+
+.info-footer h4 {
+    margin-bottom: 20px;
+    color: #FFFFFF;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.info-footer p {
+    margin-top: 15px;
+    font-size: 12px;
+    font-family: Arial, Helvetica, sans-serif;
+    color: #FFFFFF;
+}
