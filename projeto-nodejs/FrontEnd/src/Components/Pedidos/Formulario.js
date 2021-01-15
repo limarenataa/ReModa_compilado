@@ -1,98 +1,104 @@
-import { useEffect, useState } from 'react'; 
+// import { useEffect, useState } from 'react'; 
+import React from 'react'
 import { Form, Button, Col, Container } from 'react-bootstrap';
-import Pedidos from './Pedidos';
 import './formulario.css';
 
 
+const Formulario = () => {
 
-export default function Formulario(props) {
+    const[formulario, setFormulario] = React.useState({
+        nomecliente:"",
+        email:"",
+        telefone:"",
+        endereco:"",
+        complemento:"",
+        descricao_produto:"",
+        preco: "",
+        quantidade:"",
+        preco_final:""
 
-    const [ pedidos, setPedidos ] = useState([]) // useState é uma função que retorna 2 valores. Então ele retorna o estado (pedidos) e a função para poder modificar o estado (setPedidos)
+    })
 
-    const controleEnvio = async (evento) => {
-        evento.preventDefault();
+    const [response, setResponse] = React.useState(null)
     
-        const url = "http://localhost/remoda/ReModa/projeto-react/src/php/api/pedidos.php";
-        const dados = new FormData(evento.target);
-        const cabecalho = { 
-            method: "POST", 
-            body: dados, 
-            };
-        
-        const resposta = await fetch(url, cabecalho);
-        const resultado = await resposta.json()
-        console.log(resultado);
+    function handleChange({target}){  //O target faz ligação com o value do input.
+        const {id, value} = target
+        //Substitui o primeiro parâmentro pelo segundo. 
+        setFormulario({ ...formulario, [id]:value})
+        console.log({[id]:value})
 
-    
     }
 
-    //Exibição da lista do BD 
-    useEffect(() => {
-        async function pedidosClientes(){
-            const url = "http://localhost/remoda/ReModa/projeto-react/src/php/api/joinPedidosClientes.php"
-            const resposta = await fetch(url);
-            const resultado = await resposta.json();
-         
-            setPedidos(resultado);
-        }
+    //Enviando nossos dados para a API
+    function handleSubmit(event){
+        event.preventDefault()
+        fetch("http://localhost:4000/pedidos", {
+            method:"POST",
+            headers:{
+                "Content-Type": "application/json"
+            },
+            //transforma em json 
+            body: JSON.stringify(formulario) 
+        }).then((res)=> {
+            setResponse(res);
+        });
+    }
 
-        pedidosClientes();
-    }, [pedidos], [])  // o estado de pedidos vai atualizar na lista toda vez que foi modificado.
 
     return (
         <Container className="formulario">
-            <Form  onSubmit={controleEnvio}>
+            <Form onSubmit={handleSubmit}>
                 
                 <h3 className="titulo-form">Faça seu pedido</h3>
 
                     <Form.Row>
-                        <Form.Group as={Col} controlId="nome_cliente">
+                        <Form.Group as={Col} controlId="nomecliente">
                             <Form.Label>Nome: </Form.Label>
-                            <Form.Control placeholder="Nome completo"  name="nome_cliente" />
+                            <Form.Control value={formulario.nomecliente} placeholder="Nome completo"  name="nomecliente"  onChange={handleChange} />
                         </Form.Group>
 
                         <Form.Group as={Col} controlId="email" >
                             <Form.Label>Email</Form.Label>
-                            <Form.Control  placeholder="exemplo@gmail.com" name="email" />
+                            <Form.Control value={formulario.email} placeholder="exemplo@gmail.com" name="email"  onChange={handleChange} />
                         </Form.Group>
 
                         <Form.Group as={Col} controlId="telefone" > 
                             <Form.Label>Telefone: </Form.Label>
-                            <Form.Control  placeholder="(00)00000-0000" name="telefone" />
+                            <Form.Control value={formulario.telefone} placeholder="(00)00000-0000" name="telefone"  onChange={handleChange} />
                         </Form.Group>
                     </Form.Row>
 
                     <Form.Row>
                         <Form.Group as={Col} controlId="endereco" >
                             <Form.Label>Endereço: </Form.Label>
-                            <Form.Control name="endereco" />
+                            <Form.Control value={formulario.endereco} name="endereco" onChange={handleChange}/>
                         </Form.Group>
 
                         <Form.Group  as={Col} controlId="complemento"  >
                             <Form.Label>Complemento: </Form.Label>
-                            <Form.Control  name="complemento"/>
+                            <Form.Control  value={formulario.complemento} name="complemento"  onChange={handleChange}/>
                         </Form.Group>
                     </Form.Row>
 
                     <Form.Group  controlId="descricao_produto" >
                             <Form.Label>Descrição: </Form.Label>
-                            <Form.Control name="descricao_produto" />
+                            <Form.Control value={formulario.descricao_produto} name="descricao_produto"  onChange={handleChange}/>
                     </Form.Group>
 
                     <Form.Row>
                         <Form.Group as={Col} controlId="preco">
                             <Form.Label>Preço: </Form.Label>
-                            <Form.Control name="preco"/>
+                            <Form.Control value={formulario.preco} name="preco"  onChange={handleChange}/>
                         </Form.Group>
 
                         <Form.Group as={Col} controlId="quantidade">
                             <Form.Label>Quantidade: </Form.Label>
-                            <Form.Control name="quantidade" />
+                            <Form.Control value={formulario.quantidade} name="quantidade"  onChange={handleChange} />
                         </Form.Group>
 
                         <Form.Group as={Col} controlId="preco_final">
                             <Form.Label>Preço Final: </Form.Label>
-                            <Form.Control name="preco_final"/>
+                            <Form.Control value={formulario.preco_final} name="preco_final"  onChange={handleChange}/>
                         </Form.Group>
                     </Form.Row>
 
@@ -102,20 +108,10 @@ export default function Formulario(props) {
 
                     <Button className="btn-form" variant="dark" type="submit">Concluir</Button>
             </Form>
-            <div className="row">
-                <div className="col-lg-12 col-md-12 mx-auto">
-                    <div className="tabela-limitada">
-                        <table className="table table-stripe">
-                            <tbody>
-                                    {pedidos && pedidos.map(pedido => <Pedidos key={pedido.idpedidos} idpedidos={pedido.idpedidos} descricao_produto={pedido.descricao_produto}
-                                     preco={pedido.preco} quantidade={pedido.quantidade} preco_final={pedido.preco_final} fk_idcliente={pedido.fk_idcliente} 
-                                     idcliente={pedido.idcliente} nome_cliente={pedido.nome_cliente} email={pedido.email} 
-                                     telefone={pedido.telefone} endereco={pedido.endereco} complemento={pedido.complemento}/> )}
-                            </tbody>
-                        </table>
-                    </div>
-                </div>
-            </div>
+
+            {response && response.ok && <p>Dados enviados paras tabelas cliente e pedidos</p>}
         </Container>
     );
 };
+
+export default Formulario;

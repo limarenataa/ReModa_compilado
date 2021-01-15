@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react';
 import { Container, Row, ListGroup } from 'react-bootstrap';
 import Produto from '../Components/Produto';
-// import Categorias from '../Components/Categorias/Categorias';
+
 import './produtos.css'; 
 
 function Produtos() {
@@ -10,7 +10,7 @@ function Produtos() {
     
     useEffect(() => {
         async function dadosProdutos(){
-            const answer  = await fetch("http://localhost/remoda/ReModa/projeto-react/src/php/api/produtos.php")
+            const answer  = await fetch("http://localhost:4000/")
             const data = await answer.json()
             setProdutos(data);
     }
@@ -40,16 +40,14 @@ function Produtos() {
                 </ListGroup>
             </div>
             <Row className="produtos">
-                {/* { produtos && produtos.map(item => <Produto key={item.idproduto} imagem={item.imagem} 
-                descricao_produto={ item.descricao_produto  } preco_final={item.preco_final} categoria={item.categoria} /> )} */}
-            {produtos.map( produto => {
-        if (filtro == produto.categoria) {
-            return <Produto key={produto.idproduto} imagem={produto.imagem} descricao_produto={ produto.descricao_produto } preco_final={produto.preco_final} categoria={produto.categoria} />
-        
-        } else if ( filtro == "") {
-            return <Produto key={produto.idproduto} imagem={produto.imagem} descricao_produto={ produto.descricao_produto } preco_final={produto.preco_final} categoria={produto.categoria} />
-        }
-    })  }
+                {produtos.map( produto => {
+                    if (filtro == produto.categoria) {
+                        return <Produto key={produto.idproduto} imagem={produto.imagem} descricao_produto={ produto.descricao_produto } preco_final={produto.preco_final} categoria={produto.categoria} />
+            
+                    } else if ( filtro == "") {
+                        return <Produto key={produto.idproduto} imagem={produto.imagem} descricao_produto={ produto.descricao_produto } preco_final={produto.preco_final} categoria={produto.categoria} />
+                    }
+                })  }
             
             </Row>
         </Container>
