@@ -10,6 +10,7 @@ const Formulario = () => {
         nomecliente:"",
         email:"",
         telefone:"",
+        idcliente:"",
         endereco:"",
         complemento:"",
         descricao_produto:"",
@@ -51,6 +52,7 @@ const Formulario = () => {
                 
                 <h3 className="titulo-form">Faça seu pedido</h3>
 
+              
                     <Form.Row>
                         <Form.Group as={Col} controlId="nomecliente">
                             <Form.Label>Nome: </Form.Label>
@@ -65,6 +67,11 @@ const Formulario = () => {
                         <Form.Group as={Col} controlId="telefone" > 
                             <Form.Label>Telefone: </Form.Label>
                             <Form.Control value={formulario.telefone} placeholder="(00)00000-0000" name="telefone"  onChange={handleChange} />
+                        </Form.Group>
+
+                        <Form.Group as={Col} controlId="idcliente" > 
+                            <Form.Label>Código cliente: </Form.Label>
+                            <Form.Control value={formulario.idcliente} placeholder="(00)00000-0000" name="idcliente"  onChange={handleChange} />
                         </Form.Group>
                     </Form.Row>
 
