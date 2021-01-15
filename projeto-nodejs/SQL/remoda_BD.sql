@@ -32,7 +32,7 @@ CREATE TABLE `clientes` (
   `endereco` varchar(100) DEFAULT NULL,
   `complemento` varchar(50) DEFAULT NULL,
   PRIMARY KEY (`idcliente`)
-) ENGINE=MyISAM AUTO_INCREMENT=2 DEFAULT CHARSET=utf8;
+) ENGINE=MyISAM AUTO_INCREMENT=3 DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -41,7 +41,7 @@ CREATE TABLE `clientes` (
 
 LOCK TABLES `clientes` WRITE;
 /*!40000 ALTER TABLE `clientes` DISABLE KEYS */;
-INSERT INTO `clientes` VALUES (1,'Renata','renata@gmail.com','11111111','Rua A','casa B');
+INSERT INTO `clientes` VALUES (1,'Renata','renata@gmail.com','11111111','Rua A','casa b'),(2,'Fernando','fernando@gmail.com','22222222','Rua B ','casa C');
 /*!40000 ALTER TABLE `clientes` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -106,7 +106,7 @@ CREATE TABLE `pedidos` (
   `preco_final` varchar(45) DEFAULT NULL,
   `idcliente` int(11) DEFAULT NULL,
   PRIMARY KEY (`idpedidos`)
-) ENGINE=MyISAM AUTO_INCREMENT=2 DEFAULT CHARSET=utf8;
+) ENGINE=MyISAM AUTO_INCREMENT=3 DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -115,7 +115,7 @@ CREATE TABLE `pedidos` (
 
 LOCK TABLES `pedidos` WRITE;
 /*!40000 ALTER TABLE `pedidos` DISABLE KEYS */;
-INSERT INTO `pedidos` VALUES (1,'Vestido florido','120.00','1','120.00',1);
+INSERT INTO `pedidos` VALUES (1,'Vestido florido','120.00','1','120.00',1),(2,'Calça jeans','90.00','1','90.00',2);
 /*!40000 ALTER TABLE `pedidos` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -178,4 +178,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2021-01-14 23:15:41
+-- Dump completed on 2021-01-14 23:48:24
