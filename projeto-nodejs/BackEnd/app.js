@@ -37,7 +37,7 @@ app.get("/pedidos", (req, res, next) => {
         database: 'remoda'
     }); 
 
-    connection.query("SELECT * FROM clientes",  (error, result)  => {
+    connection.query("SELECT * FROM dadospedido",  (error, result)  => {
         res.json(result) //Pega os dados que vem do banco e responde em json (res=response)
 
     })
