@@ -77,6 +77,7 @@ app.post('/pedidos', (req, res) => {
     let dadosPedido = []
     dadosPedido.push({
 
+        idcliente: req.body.idcliente,
         descricao_produto: req.body.descricao_produto,
         preco: req.body.preco,
         quantidade: req.body.quantidade,
