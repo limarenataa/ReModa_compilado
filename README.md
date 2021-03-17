@@ -7,7 +7,7 @@ Compilado das etapas de evolução do projeto ReModa desenvolvidos como fixaçã
 
 Para instalar execute o comando abaixo no terminal:
 ```
-git clone https://github.com/limarenataa/ReModa.git
+git clone https://github.com/limarenataa/ReModa_compilado.git
 
 ```
 
