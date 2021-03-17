@@ -1,0 +1,109 @@
+[{
+  "_id": {
+    "$oid": "6022d051bf72ff1514e450c1"
+  },
+  "categoria": "blusas",
+  "descricao_produto": "Blusa com amarração",
+  "imagem": "blusa1.png",
+  "preco": 119.9,
+  "preco_final": 89.9
+},{
+  "_id": {
+    "$oid": "6022d051bf72ff1514e450c2"
+  },
+  "categoria": "blusas",
+  "descricao_produto": "Camiseta verde solta",
+  "imagem": "blusa2.png",
+  "preco": 99.9,
+  "preco_final": 69.9
+},{
+  "_id": {
+    "$oid": "6022d051bf72ff1514e450c3"
+  },
+  "categoria": "blusas",
+  "descricao_produto": "Camiseta bordada ",
+  "imagem": "blusa4.png",
+  "preco": 89.9,
+  "preco_final": 69.9
+},{
+  "_id": {
+    "$oid": "6022d051bf72ff1514e450c4"
+  },
+  "categoria": "blusas",
+  "descricao_produto": "Blusa  margaridas bordada",
+  "imagem": "blusa5.png",
+  "preco": 89.9,
+  "preco_final": 59.9
+},{
+  "_id": {
+    "$oid": "6022d051bf72ff1514e450c5"
+  },
+  "categoria": "blusas",
+  "descricao_produto": "Camiseta verde",
+  "imagem": "blusa8.png",
+  "preco": 89.9,
+  "preco_final": 69.9
+},{
+  "_id": {
+    "$oid": "6022d051bf72ff1514e450c6"
+  },
+  "categoria": "blusas",
+  "descricao_produto": "Camiseta babado",
+  "imagem": "blusa12.png",
+  "preco": 89.9,
+  "preco_final": 69.9
+},{
+  "_id": {
+    "$oid": "6022d051bf72ff1514e450c7"
+  },
+  "categoria": "vestidos",
+  "descricao_produto": "Vestido amarelo floral",
+  "imagem": "vestido1.jpg",
+  "preco": 69.9,
+  "preco_final": 39.9
+},{
+  "_id": {
+    "$oid": "6022d051bf72ff1514e450c8"
+  },
+  "categoria": "vestidos",
+  "descricao_produto": "Vestido rosê",
+  "imagem": "vestido2.jpg",
+  "preco": 99.9,
+  "preco_final": 79.9
+},{
+  "_id": {
+    "$oid": "6022d051bf72ff1514e450c9"
+  },
+  "categoria": "shorts",
+  "descricao_produto": "Short jeans claro",
+  "imagem": "short1.jpg",
+  "preco": 149.9,
+  "preco_final": 99.9
+},{
+  "_id": {
+    "$oid": "6022d051bf72ff1514e450ca"
+  },
+  "categoria": "shorts",
+  "descricao_produto": "Short rasgado",
+  "imagem": "short2.jpg",
+  "preco": 69.9,
+  "preco_final": 49.9
+},{
+  "_id": {
+    "$oid": "6022d051bf72ff1514e450cb"
+  },
+  "categoria": "calcas",
+  "descricao_produto": "Calça com rasgos",
+  "imagem": "calca1.jpg",
+  "preco": 119.9,
+  "preco_final": 89.9
+},{
+  "_id": {
+    "$oid": "6022d051bf72ff1514e450cc"
+  },
+  "categoria": "calcas",
+  "descricao_produto": "Calça social",
+  "imagem": "calca2.jpg",
+  "preco": 149.9,
+  "preco_final": 119.9
+}]

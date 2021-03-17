@@ -1,0 +1,8 @@
+Lazy Loading
+
+Foi aplicado o Lazy Loading nos arquivos:
+
+- Nas rotas do aquivo src/rotas.js;
+- No componente (src/CodeSplitting/BannerCarousel) na pagina Home.js (src/Pages/Home);
+- No componente (src/CodeSplitting/Rodape) no arquivo App.js (src/App.js);
+

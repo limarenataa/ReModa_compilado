@@ -1,0 +1,25 @@
+.pgProdutos {
+    display: flex;
+
+}
+
+.categorias{
+    margin-right: 20px;
+    display: flex;
+    flex-direction: column;
+}
+
+.categorias h4{
+    margin-top: 40px;
+    margin-bottom: 50px;
+}
+
+
+.categorias-lista {
+    justify-content: center;
+} 
+
+.produtos {
+    display: flex;
+    flex-wrap: wrap;
+}
